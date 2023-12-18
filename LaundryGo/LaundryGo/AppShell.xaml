@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="LaundryGo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:LaundryGo"
+    xmlns:login="clr-namespace:LaundryGo.Platforms.Android.FldrLogin"
+    xmlns:main="clr-namespace:LaundryGo.Platforms.Android.FldrMain"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="Loading"
+        ContentTemplate="{DataTemplate login:PageLoading}"
+        Route="PageLoading" 
+        Shell.FlyoutItemIsVisible="False"
+        />
+    
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate login:PageLogin}"
+        Route="PageLogin"
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"
+        />    
+    
+    <ShellContent
+        Title="Change Password"
+        ContentTemplate="{DataTemplate login:PageChangePassword}"
+        Route="PageChangePassword"
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"
+        />
+    
+    <ShellContent
+        Title="Sign - up"
+        ContentTemplate="{DataTemplate login:PageSignUp}"
+        Route="PageSignUp"
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"
+        />
+
+    <TabBar FlyoutDisplayOptions="AsMultipleItems" >
+        <ShellContent
+        Title="Home"
+        Icon="home.png"
+        ContentTemplate="{DataTemplate main:PageMainMenu}"
+        Route="PageMainMenu" />
+
+        <!--<ShellContent
+        Title="Map"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+
+        <ShellContent
+        Title="Map"
+        Icon="map.png"
+        ContentTemplate="{DataTemplate main:PageMap}"
+        Route="PageMap" />
+
+        <ShellContent
+        Title="Profile"
+        Icon="profile.png"
+        ContentTemplate="{DataTemplate main:PageProfile}"
+        Route="PageProfile" />
+    </TabBar>
+
+</Shell>

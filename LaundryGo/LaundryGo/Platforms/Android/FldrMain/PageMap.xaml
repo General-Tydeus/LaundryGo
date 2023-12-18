@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LaundryGo.Platforms.Android.FldrMain.PageMap"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             xmlns:loc="clr-namespace:Microsoft.Maui.Devices.Sensors;assembly=Microsoft.Maui.Essentials"
+             Title="PageMap">
+    
+    <StackLayout>
+        <maps:Map x:Name="map" IsShowingUser="true" IsTrafficEnabled="true" MapType="Street"/>
+    </StackLayout>
+</ContentPage>

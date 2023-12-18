@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LaundryGo.Platforms.Android.FldrSetup.PageShopSetup"
+             xmlns:customControls="clr-namespace:LaundryGo.Platforms.Android.Interface"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             Shell.NavBarIsVisible="false"
+             Title="PageShopSetup">
+    <ScrollView>
+        <StackLayout Padding="25" Spacing="25">
+            <Label 
+        Text="Laundry Shop Set - up"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" 
+        FontSize="25"
+        />
+        <customControls:Outline
+            x:Name="shopNameOutline"
+            PlaceHolder="Name"
+            IsPassword="False"/>
+            
+        <customControls:Outline
+            x:Name="shopContactOutline"
+            PlaceHolder="Contact No."
+            IsPassword="False"
+            Focused="shopContactOutline_Unfocused"
+            />
+            
+        <customControls:Outline
+            x:Name="shopEmailOutline"
+            PlaceHolder="Email"
+            IsPassword="False"/>
+            
+        <customControls:Outline
+            x:Name="shopAddressOutline"
+            PlaceHolder="Address"
+            IsPassword="False"/>
+
+        <ProgressBar x:Name="myProgressBar" Progress="0" />
+        <Button Text="Update Progress" Clicked="OnUpdateProgressClicked" />
+            
+            <!--<customControls:Outline x:Name="usernameOutline" PlaceHolder="Username" IsPassword="False"/>
+        <customControls:Outline x:Name="passwordOutline" PlaceHolder="Password" IsPassword="True"/>
+        <customControls:Outline x:Name="confirmpasswordOutline" PlaceHolder="Confirm Password" IsPassword="True"/>-->
+            
+            
+        <!--<StackLayout HeightRequest="250">
+            <maps:Map x:Name="map" IsShowingUser="true" IsTrafficEnabled="False" MapType="Hybrid"/>
+        </StackLayout>-->
+
+        <!--<Button
+          x:Name="btnSignUp"
+          BackgroundColor="Navy"
+          BorderWidth="2"
+          CornerRadius="10"
+          BorderColor="Navy"
+          Text="Create Shop"
+          TextColor="White"
+          Clicked="btnSignUp_Clicked"-->
+            
+     <!--/>-->
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

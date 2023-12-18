@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LaundryGo.Platforms.Android.FldrMain.PageProfile"
+             Title="PageProfile">
+    <VerticalStackLayout Padding="25" Spacing="25">
+        <Frame BorderColor="Black" CornerRadius="5" HasShadow="True">
+            <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                     <RowDefinition Height="Auto" />
+                     <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="7*" />
+                </Grid.ColumnDefinitions>
+                <Image
+                     Grid.Column="0"
+                     Grid.Row="0"
+                     Grid.RowSpan="2"
+                     Source="dotnet_bot.png"
+                     SemanticProperties.Description="Cute Bot"
+                     HeightRequest="100"
+                     WidthRequest="60"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Center"
+                    />
+                <Label
+                    x:Name="lblfname"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Text="full Name"
+                    FontSize="24"
+                    />
+                <Label
+                    x:Name="lblUser"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Text="Username"
+                    FontSize="18"
+                    />
+            </Grid>
+        </StackLayout>
+        </Frame>
+
+        <Button Text="Set up Shop"
+                Clicked="SetupShop"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand"
+                />
+        
+        <Button Text="Log out"
+                Clicked="Button_Clicked"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="EndAndExpand"
+                />
+    </VerticalStackLayout>
+</ContentPage>

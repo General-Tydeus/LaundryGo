@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LaundryGo.Platforms.Android.FldrLogin.PageSignUp"
+             xmlns:customControls="clr-namespace:LaundryGo.Platforms.Android.Interface"
+             Shell.NavBarIsVisible="false"
+             Title="PageSignUp">
+    <VerticalStackLayout Padding="25" Spacing="25">
+        <Label 
+            Text="Sign - Up"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="25"
+            />
+        <customControls:Outline x:Name="fullnameOutline" PlaceHolder="Full name" IsPassword="False"/>
+        <customControls:Outline x:Name="emailOutline" PlaceHolder="Email" IsPassword="False"/>
+        <customControls:Outline x:Name="usernameOutline" PlaceHolder="Username" IsPassword="False"/>
+        <customControls:Outline x:Name="passwordOutline" PlaceHolder="Password" IsPassword="True"/>
+        <customControls:Outline x:Name="confirmpasswordOutline" PlaceHolder="Confirm Password" IsPassword="True"/>
+
+        <Button
+          x:Name="btnSignUp"
+          BackgroundColor="Navy"
+          BorderWidth="2"
+          CornerRadius="10"
+          BorderColor="Navy"
+          Text="Sign Up"
+          TextColor="White"
+          Clicked="btnSignUp_Clicked"
+         />
+
+    </VerticalStackLayout>
+</ContentPage>

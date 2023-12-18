@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LaundryGo.Platforms.Android.FldrLogin.PageLogin"
+             xmlns:customControls="clr-namespace:LaundryGo.Platforms.Android.Interface"
+             Shell.NavBarIsVisible="false"
+             Title="PageLogin">
+    <ScrollView BackgroundColor="White">
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center"
+            >
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute Bot"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                />
+            <customControls:Outline x:Name="usernameOutline" PlaceHolder="Username" IsPassword="False"/>
+            <customControls:Outline x:Name="passwordOutline" PlaceHolder="Password" IsPassword="True" />
+            
+            <!--<Label Text="Forgot Password?"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="EndAndExpand"
+                   Margin="0,-20,0,0"
+               >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>-->
+            <Label VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,-20,0,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Forgot Password?"  TextColor="Black"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Button
+                 x:Name="btnLogin"
+                 BackgroundColor="Navy"
+                 BorderWidth="2"
+                 CornerRadius="10"
+                 BorderColor="Navy"
+                 Text="Login"
+                 TextColor="White"
+                Clicked="btnLogin_Clicked"
+                />
+
+            <Label VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Don't have an Account? "  TextColor="Black"/>
+                        <Span Text="Sign up" TextColor="Blue" />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                </Label.GestureRecognizers>
+            </Label>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
